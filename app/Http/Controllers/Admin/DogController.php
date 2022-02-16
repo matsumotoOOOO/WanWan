@@ -59,7 +59,12 @@ class DogController extends Controller
       $check->user_id = Auth::id();
       $check->dog_id = $request->dog_id;
       
-/*      if for でも記述できます
+      if ($request->has('health')) {
+        $health = $request->health;
+        $check->health = implode(" , ",$health);
+      }
+      
+      /*      if for でも記述できます
       $strHealth = "";
       
       if ($request->has('health')) {
@@ -72,11 +77,8 @@ class DogController extends Controller
           }
       }
       $check->health = $strHealth;
-*/      
-      if ($request->has('health')) {
-        $health = $request->health;
-        $check->health = implode("  ",$health);
-      }
+      */      
+
       $check->registerd_at = Carbon::now();
       $check->nextcheck_at = Carbon::now()->addWeek(2);
       

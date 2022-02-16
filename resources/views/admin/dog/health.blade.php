@@ -235,6 +235,7 @@
     <input type="hidden" name="dog_id" value="{{ $dog->id }}">
 
     </form>
+    
   </div>
 
 <script>

@@ -23,8 +23,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
     Route::get('dog/select', 'Admin\DogController@select')->name('select');
     Route::get('dog/all_history', 'Admin\DogController@all_history')->name('all_history');
     Route::get('dog/each_history', 'Admin\DogController@each_history')->name('each_history');
-    
-    Route::get('dog/practice', 'Admin\DogController@practice')->name('practice');
 
 });
 

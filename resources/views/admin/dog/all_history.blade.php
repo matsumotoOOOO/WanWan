@@ -8,12 +8,12 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 
-    <div class="container">
+    <div class="container py-3">
 
-        <h2 class="py-3">履歴一覧画面</h2>
-        <p class="py-3">わんちゃんの名前で履歴を絞り込めます。</p>
-        <div class="dropdown py-3 mb-5">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h2 class="py-3 mb-4">履歴一覧画面</h2>
+        <p class="py-2" style="font-size:15px;">わんちゃんの名前で履歴を絞り込めます。</p>
+        <div class="dropdown pb-3 mb-5">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             わんちゃんの名前を選択してください
             </button>
   
@@ -41,13 +41,6 @@
             </tbody>
             @endforeach
         </table>
-  
-        <div class="row mb-4">
-            <div class="col-md-4 offset-md-4">
-                <a href="{{ route('home') }}" class="btn btn-primary btn-lg btn-block mx-auto d-block">TOPへ</a>
-            </div>  
-         </div>
-
     </div>
 
 @endsection
