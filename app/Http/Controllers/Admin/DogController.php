@@ -35,7 +35,7 @@ class DogController extends Controller
   
     public function select(Request $request)
   {
-      $items = Check::with('dog')->
+      $items = Check::where('user_id',Auth::id())->
                latest()->
                get();
 
